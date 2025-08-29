@@ -1,0 +1,22 @@
+<table>
+  <thead>
+    <img src="<%= image_path('/tests/image.jpg')%>">
+    <tr>
+      <th>ID</th>
+      <th>Name</th>
+      <th>Body</th>
+      <th>Show</th>
+      <th>Edit</th>
+      <th>Delete</th>
+      <th><%= link_to 'New Article', new_article_path %></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @articles.each do |article| %>
+      <tr>
+        <%= render article %>
+      </tr>
+    <% end %>
+  </tbody>
+</table>

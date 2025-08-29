@@ -1,0 +1,3 @@
+<%= form_with scope: :article, url: update_article_path(@article.id), local: true do |f| %>
+  <%= render 'shared/form', f: f %>
+<% end %>
